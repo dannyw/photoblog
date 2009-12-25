@@ -5,7 +5,7 @@ atom_feed do |feed|
   @photos.each do |photo|
     feed.entry(photo) do |entry|
       entry.title(photo.title)
-      entry.content(image_tag(photo.img_url) + textilize(photo.caption), :type => 'html')
+      entry.content(image_tag(photo.img_url) + photo.caption, :type => 'html')
       entry.author { |author| author.name("Danny Wen") }
     end
   end

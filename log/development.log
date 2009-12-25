@@ -6134,3 +6134,294 @@ Rendering photos/show
 Rendered photos/_photo (2.9ms)
 DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
 Completed in 33ms (View: 14, DB: 8) | 200 OK [http://localhost/photos/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2009-12-25 15:53:18) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mPhoto Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id < 5) ORDER BY pub_date DESC LIMIT 1[0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id > 5) LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering photos/show
+Rendered photos/_photo (3.0ms)
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 20ms (View: 7, DB: 2) | 200 OK [http://localhost/photos/5]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2009-12-25 15:53:20) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mPhoto Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id < 5) ORDER BY pub_date DESC LIMIT 1[0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id > 5) LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering photos/show
+Rendered photos/_photo (2.9ms)
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 19ms (View: 7, DB: 2) | 200 OK [http://localhost/photos/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2009-12-25 15:53:25) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPhoto Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id < 4) ORDER BY pub_date DESC LIMIT 1[0m
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id > 4) LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering photos/show
+Rendered photos/_photo (3.2ms)
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 20ms (View: 7, DB: 2) | 200 OK [http://localhost/photos/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2009-12-25 15:53:26) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPhoto Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id < 3) ORDER BY pub_date DESC LIMIT 1[0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id > 3) LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering photos/show
+Rendered photos/_photo (3.3ms)
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 19ms (View: 7, DB: 2) | 200 OK [http://localhost/photos/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2009-12-25 15:53:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPhoto Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id < 2) ORDER BY pub_date DESC LIMIT 1[0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id > 2) LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering photos/show
+Rendered photos/_photo (3.2ms)
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 24ms (View: 7, DB: 2) | 200 OK [http://localhost/photos/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2009-12-25 15:53:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPhoto Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id < 2) ORDER BY pub_date DESC LIMIT 1[0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id > 2) LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering photos/show
+Rendered photos/_photo (3.6ms)
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 23ms (View: 8, DB: 2) | 200 OK [http://localhost/photos/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2009-12-25 15:53:46) [GET]
+  Parameters: {"id"=>"2"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/photos/2/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2009-12-25 15:53:46) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPhoto Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 38ms (View: 28, DB: 2) | 200 OK [http://localhost/photos/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2009-12-25 15:53:53) [PUT]
+  Parameters: {"photo"=>{"pub_date(5i)"=>"29", "title"=>"Another One!", "flickr_url"=>"", "caption"=>"How about some running?! <a href\"\">asdfas</a>", "pub_date(1i)"=>"2009", "pub_date(2i)"=>"12", "img_url"=>"http://farm3.static.flickr.com/2631/4183393663_f3074482e6_b.jpg", "pub_date(3i)"=>"21", "pub_date(4i)"=>"02"}, "commit"=>"Update", "authenticity_token"=>"elNzQsoUHGsY5LNh6ps6I5jIaAadSikLV/P2GgdGZiE=", "id"=>"2"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 2ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/photos/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2009-12-25 15:53:53) [PUT]
+  Parameters: {"photo"=>{"pub_date(5i)"=>"29", "title"=>"Another One!", "flickr_url"=>"", "caption"=>"How about some running?! <a href\"\">asdfas</a>", "pub_date(1i)"=>"2009", "pub_date(2i)"=>"12", "img_url"=>"http://farm3.static.flickr.com/2631/4183393663_f3074482e6_b.jpg", "pub_date(3i)"=>"21", "pub_date(4i)"=>"02"}, "commit"=>"Update", "authenticity_token"=>"elNzQsoUHGsY5LNh6ps6I5jIaAadSikLV/P2GgdGZiE=", "id"=>"2"}
+  [4;36;1mPhoto Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPhoto Update (0.2ms)[0m   [0mUPDATE `photos` SET `updated_at` = '2009-12-25 20:53:53', `flickr_url` = '', `caption` = 'How about some running?! <a href\"\">asdfas</a>' WHERE `id` = 2[0m
+  [4;36;1mSQL (11.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/photos/2
+Completed in 30ms (DB: 13) | 302 Found [http://localhost/photos/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2009-12-25 15:53:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPhoto Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id < 2) ORDER BY pub_date DESC LIMIT 1[0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id > 2) LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering photos/show
+Rendered photos/_photo (3.1ms)
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 19ms (View: 7, DB: 2) | 200 OK [http://localhost/photos/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2009-12-25 15:54:16) [GET]
+  Parameters: {"id"=>"2"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 1ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/photos/2/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2009-12-25 15:54:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPhoto Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+Rendering template within layouts/photos
+Rendering photos/edit
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 38ms (View: 28, DB: 2) | 200 OK [http://localhost/photos/2/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2009-12-25 15:54:23) [PUT]
+  Parameters: {"photo"=>{"pub_date(5i)"=>"29", "title"=>"Another One!", "flickr_url"=>"", "caption"=>"How about some running?! *bold this?*", "pub_date(1i)"=>"2009", "pub_date(2i)"=>"12", "img_url"=>"http://farm3.static.flickr.com/2631/4183393663_f3074482e6_b.jpg", "pub_date(3i)"=>"21", "pub_date(4i)"=>"02"}, "commit"=>"Update", "authenticity_token"=>"elNzQsoUHGsY5LNh6ps6I5jIaAadSikLV/P2GgdGZiE=", "id"=>"2"}
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 2ms (View: 1, DB: 0) | 401 Unauthorized [http://localhost/photos/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2009-12-25 15:54:23) [PUT]
+  Parameters: {"photo"=>{"pub_date(5i)"=>"29", "title"=>"Another One!", "flickr_url"=>"", "caption"=>"How about some running?! *bold this?*", "pub_date(1i)"=>"2009", "pub_date(2i)"=>"12", "img_url"=>"http://farm3.static.flickr.com/2631/4183393663_f3074482e6_b.jpg", "pub_date(3i)"=>"21", "pub_date(4i)"=>"02"}, "commit"=>"Update", "authenticity_token"=>"elNzQsoUHGsY5LNh6ps6I5jIaAadSikLV/P2GgdGZiE=", "id"=>"2"}
+  [4;36;1mPhoto Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPhoto Update (0.3ms)[0m   [0mUPDATE `photos` SET `updated_at` = '2009-12-25 20:54:23', `caption` = 'How about some running?! *bold this?*' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/photos/2
+Completed in 21ms (DB: 2) | 302 Found [http://localhost/photos/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2009-12-25 15:54:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPhoto Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id < 2) ORDER BY pub_date DESC LIMIT 1[0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id > 2) LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering photos/show
+Rendered photos/_photo (3.8ms)
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 23ms (View: 9, DB: 2) | 200 OK [http://localhost/photos/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2009-12-25 15:54:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPhoto Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;35;1mPhoto Load (0.5ms)[0m   [0mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id < 2) ORDER BY pub_date DESC LIMIT 1[0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id > 2) LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering photos/show
+
+ActionView::TemplateError (uninitialized constant ActionView::Helpers::TextHelper::RedCloth) on line #7 of app/views/photos/_photo.html.erb:
+4: </div> 
+5: <div class="words"> 
+6:   <p>
+7:     <%= textilize(photo.caption) %>
+8:   </p> 
+9:   <p>
+10:     <a href="<%= photo.flickr_url %>">View on Flickr</a>
+
+    app/views/photos/_photo.html.erb:7
+    app/views/photos/show.html.erb:1
+    app/controllers/photos_controller.rb:30:in `show'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (118.3ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2009-12-25 15:57:17) [GET]
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM `photos` WHERE (pub_date <= NOW()) ORDER BY pub_date DESC LIMIT 15[0m
+Rendering template within layouts/photos
+Rendering photos/index
+  [4;35;1mPhoto Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Rendered photos/_photo (6.1ms)
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 30ms (View: 20, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2009-12-25 15:57:20) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mPhoto Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.9ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id < 4) ORDER BY pub_date DESC LIMIT 1[0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id > 4) LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering photos/show
+Rendered photos/_photo (2.7ms)
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 19ms (View: 7, DB: 2) | 200 OK [http://localhost/photos/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2009-12-25 15:57:23) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mPhoto Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id < 4) ORDER BY pub_date DESC LIMIT 1[0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id > 4) LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering photos/show
+Rendered photos/_photo (3.6ms)
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 20ms (View: 8, DB: 2) | 200 OK [http://localhost/photos/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2009-12-25 15:57:25) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPhoto Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 3) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id < 3) ORDER BY pub_date DESC LIMIT 1[0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id > 3) LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering photos/show
+Rendered photos/_photo (2.8ms)
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 23ms (View: 7, DB: 3) | 200 OK [http://localhost/photos/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2009-12-25 15:57:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPhoto Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (2.3ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 2) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id < 2) ORDER BY pub_date DESC LIMIT 1[0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (pub_date <= NOW() AND id > 2) LIMIT 1[0m
+Rendering template within layouts/photos
+Rendering photos/show
+Rendered photos/_photo (2.7ms)
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 29ms (View: 6, DB: 9) | 200 OK [http://localhost/photos/2]
