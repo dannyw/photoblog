@@ -1,0 +1,30 @@
+<h1><%=h photo.title %> &middot; <%=h photo.pub_date.to_formatted_s(:month_day_year) %> </h1> 
+<div class="photo-container"> 
+  <img src="<%=h photo.img_url %>" class="photo"/>
+</div> 
+<div class="words"> 
+  <p>
+    <%=h photo.caption %>
+  </p> 
+  <p>
+    <a href="<%= photo.flickr_url %>">View on Flickr</a>
+  </p>
+</div> 
+
+<div class="meta">
+  <p>
+    <% if @previous_photo %>
+      <%= link_to '&larr; Prev', :controller=>"photos", :action=>"show", :id=>@previous_photo.id %>
+    <% else %>
+      <a href="javascript:void(0);" class="disabled">&larr; Prev</a>
+    <% end %>
+    <% if @next_photo %>
+      <%= link_to 'Next &rarr;', :controller=>"photos", :action=>"show", :id=>@next_photo.id %>
+    <% else %>
+      <a href="javascript:void(0);" class="disabled">Next &rarr;</a>
+    <% end %>
+  </p>
+
+</div>
+
+<div style="clear:both;"></div>

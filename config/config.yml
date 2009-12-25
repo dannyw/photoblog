@@ -1,0 +1,10 @@
+development: &non_production_settings
+  :username: "dannywen"
+  :password: "dannytest"
+
+test:
+  <<: *non_production_settings
+
+production:
+  :username: "dannywen"
+  :password: "dannytest"

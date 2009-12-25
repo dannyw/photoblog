@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" > 
+<head> 
+  <title>Photos: <%= controller.action_name %></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <%= stylesheet_link_tag 'scaffold' %>
+  <link href="/stylesheets/photoblog.css" media="screen" rel="stylesheet" type="text/css" />  
+  <%= auto_discovery_link_tag :atom, formatted_photos_path(:atom) %>
+</head> 
+ 
+<body>  
+  
+  <div id="top-bar">
+    <div id="top-bar-content">
+      <div id="site-title">
+        <a href="/"><em>Plasticity</em></a>
+      </div>      
+      <!-- div id="top-nav">
+        <a href="">About</a>
+        <a href="">Archive</a>
+      </div -->
+    </div>
+  </div>
+
+  <p style="color: green"><%= flash[:notice] %></p>
+  
+  <div id="container" style="width: 1000px;border:0px solid #c00;"> 
+    
+    
+    <%= yield %>  
+    
+  
+    <div id="footer"> 
+    	&copy; 2009 <a href="http://www.dannywen.com">Danny Wen</a>
+    </div> 
+  
+  </div> 
+</body> 
+</html>
