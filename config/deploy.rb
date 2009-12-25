@@ -22,4 +22,9 @@ namespace :deploy do
   task :restart do
     run "touch #{current_path}/tmp/restart.txt" 
   end
+  
+  task :after_update_code do
+    run "cp #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "cp #{shared_path}/config/initializers/load_config.rb #{release_path}/config/initializers/load_config.rb"
+  end
 end
