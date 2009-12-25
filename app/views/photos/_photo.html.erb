@@ -4,7 +4,7 @@
 </div> 
 <div class="words"> 
   <p>
-    <%=h photo.caption %>
+    <%= textilize(photo.caption) %>
   </p> 
   <p>
     <a href="<%= photo.flickr_url %>">View on Flickr</a>

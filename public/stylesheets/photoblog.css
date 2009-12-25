@@ -6,17 +6,13 @@
     url("type/League Gothic.otf") format("opentype"),
     url("type/filename.svg#filename") format("svg");
   }
-  
-  
-
 
 html {
   margin: 0;
   padding: 0; 
-  background: #232323;
+  background: #232323 url('/images/grey-gradient.png') repeat-x;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #454545), color-stop(1.0, #232323)) #232323 no-repeat;
-  background: -moz-linear-gradient(left top, left bottom, #454545, #232323) #232323 no-repeat;
-  background: gradient(linear, left top, left bottom, color-stop(0.0, #454545), color-stop(1.0, #232323)) #232323 no-repeat;;
+  background: -moz-linear-gradient(left top, left bottom, #454545, #232323);
   height:100%;
 }
 
@@ -63,7 +59,7 @@ h1 {
 
 img.photo {
   border: 5px solid #efefef;
-  width:990px;
+  width:900px;
   -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.2);
   -moz-box-shadow: 0 1px 10px rgba(0,0,0,.1);
   box-shadow: 0 1px 10px rgba(0,0,0,.1);  
@@ -135,7 +131,7 @@ img.photo {
 
 #top-bar-content {
   margin: 0 auto;
-  width: 1000px;
+  width: 910px;
 }
 
 #site-title {
