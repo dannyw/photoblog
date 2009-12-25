@@ -10,7 +10,6 @@ require 'active_support/core_ext/string/multibyte'
 require 'active_support/core_ext/string/xchar'
 require 'active_support/core_ext/string/filters'
 require 'active_support/core_ext/string/behavior'
-require 'active_support/core_ext/string/output_safety'
 
 class String #:nodoc:
   include ActiveSupport::CoreExtensions::String::Access
@@ -21,5 +20,4 @@ class String #:nodoc:
   include ActiveSupport::CoreExtensions::String::Iterators
   include ActiveSupport::CoreExtensions::String::Behavior
   include ActiveSupport::CoreExtensions::String::Multibyte
-  include ActiveSupport::CoreExtensions::String::OutputSafety
 end

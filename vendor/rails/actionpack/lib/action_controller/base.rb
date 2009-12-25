@@ -502,7 +502,7 @@ module ActionController #:nodoc:
               end
             elsif block_given?
               key = key.dup
-              value = value.dup if value.duplicable?
+              value = value.dup if value
               yield key, value
               filtered_parameters[key] = value
             else

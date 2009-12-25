@@ -260,9 +260,9 @@ module ActiveResource
       true
     rescue ResourceInvalid => error
       case error.response['Content-Type']
-      when /xml/
+      when 'application/xml'
         errors.from_xml(error.response.body)
-      when /json/
+      when 'application/json'
         errors.from_json(error.response.body)
       end
       false

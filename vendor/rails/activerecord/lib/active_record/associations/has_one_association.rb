@@ -8,21 +8,18 @@ module ActiveRecord
 
       def create(attrs = {}, replace_existing = true)
         new_record(replace_existing) do |reflection|
-          attrs = merge_with_conditions(attrs)
           reflection.create_association(attrs)
         end
       end
 
       def create!(attrs = {}, replace_existing = true)
         new_record(replace_existing) do |reflection|
-          attrs = merge_with_conditions(attrs)
           reflection.create_association!(attrs)
         end
       end
 
       def build(attrs = {}, replace_existing = true)
         new_record(replace_existing) do |reflection|
-          attrs = merge_with_conditions(attrs)
           reflection.build_association(attrs)
         end
       end
@@ -121,12 +118,6 @@ module ActiveRecord
           end
 
           record
-        end
-
-        def merge_with_conditions(attrs={})
-          attrs ||= {}
-          attrs.update(@reflection.options[:conditions]) if @reflection.options[:conditions].is_a?(Hash)
-          attrs
         end
     end
   end

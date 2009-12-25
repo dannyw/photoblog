@@ -7,8 +7,7 @@ module MysqlCompat #:nodoc:
     raise 'Mysql not loaded' unless defined?(::Mysql)
 
     target = defined?(Mysql::Result) ? Mysql::Result : MysqlRes
-    return if target.instance_methods.include?('all_hashes') ||
-              target.instance_methods.include?(:all_hashes)
+    return if target.instance_methods.include?('all_hashes')
 
     # Ruby driver has a version string and returns null values in each_hash
     # C driver >= 2.7 returns null values in each_hash
@@ -64,15 +63,12 @@ module ActiveRecord
           raise
         end
       end
-
       MysqlCompat.define_all_hashes_method!
 
       mysql = Mysql.init
       mysql.ssl_set(config[:sslkey], config[:sslcert], config[:sslca], config[:sslcapath], config[:sslcipher]) if config[:sslca] || config[:sslkey]
 
-      default_flags = Mysql.const_defined?(:CLIENT_MULTI_RESULTS) ? Mysql::CLIENT_MULTI_RESULTS : 0
-      options = [host, username, password, database, port, socket, default_flags]
-      ConnectionAdapters::MysqlAdapter.new(mysql, logger, options, config)
+      ConnectionAdapters::MysqlAdapter.new(mysql, logger, [host, username, password, database, port, socket], config)
     end
   end
 

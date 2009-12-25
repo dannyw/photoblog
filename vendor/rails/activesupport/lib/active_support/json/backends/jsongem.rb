@@ -2,9 +2,10 @@ require 'json' unless defined?(JSON)
 
 module ActiveSupport
   module JSON
+    ParseError = ::JSON::ParserError unless const_defined?(:ParseError)
+
     module Backends
       module JSONGem
-        ParseError = ::JSON::ParserError
         extend self
 
         # Converts a JSON string into a Ruby object.

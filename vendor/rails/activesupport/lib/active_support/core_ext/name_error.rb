@@ -2,9 +2,7 @@
 class NameError #:nodoc:  
   # Add a method to obtain the missing name from a NameError.
   def missing_name
-    if /undefined local variable or method/ !~ message
-      $1 if /((::)?([A-Z]\w*)(::[A-Z]\w*)*)$/ =~ message
-    end
+    $1 if /((::)?([A-Z]\w*)(::[A-Z]\w*)*)$/ =~ message
   end
   
   # Was this exception raised because the given name was missing?

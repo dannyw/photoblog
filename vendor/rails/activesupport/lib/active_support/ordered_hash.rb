@@ -120,13 +120,6 @@ module ActiveSupport
         dup.merge!(other_hash)
       end
 
-      # When replacing with another hash, the initial order of our keys must come from the other hash -ordered or not.
-      def replace(other)
-        super
-        @keys = other.keys
-        self
-      end
-
       def inspect
         "#<OrderedHash #{super}>"
       end

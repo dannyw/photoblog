@@ -2,9 +2,8 @@ require 'abstract_unit'
 require 'controller/fake_models'
 
 class CompiledTemplatesTest < Test::Unit::TestCase
-
+  
   def setup
-    @explicit_view_paths = nil
     @compiled_templates = ActionView::Base::CompiledTemplates
     @compiled_templates.instance_methods.each do |m|
       @compiled_templates.send(:remove_method, m) if m =~ /^_run_/

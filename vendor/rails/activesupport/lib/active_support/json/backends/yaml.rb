@@ -2,9 +2,13 @@ require 'active_support/core_ext/string/starts_ends_with'
 
 module ActiveSupport
   module JSON
+    unless const_defined?(:ParseError)
+      class ParseError < StandardError
+      end
+    end
+
     module Backends
       module Yaml
-        ParseError = ::StandardError
         extend self
 
         # Converts a JSON string into a Ruby object.
