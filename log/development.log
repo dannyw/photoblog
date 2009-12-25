@@ -5127,3 +5127,14 @@ Rendering photos/show
 Rendered photos/_photo (2.7ms)
 DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
 Completed in 20ms (View: 8, DB: 2) | 200 OK [http://localhost/photos/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2009-12-25 02:19:44) [GET]
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM `photos` WHERE (pub_date <= NOW()) ORDER BY pub_date DESC LIMIT 15[0m
+Rendering template within layouts/photos
+Rendering photos/index
+  [4;36;1mPhoto Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Rendered photos/_photo (5.5ms)
+DEPRECATION WARNING: formatted_photos_path() has been deprecated. Please pass format to the standard photos_path method instead.. (called from _run_erb_app47views47layouts47photos46html46erb at /Users/danny/Sites/photoblog/app/views/layouts/photos.html.erb:8)
+Completed in 23ms (View: 13, DB: 2) | 200 OK [http://localhost/]

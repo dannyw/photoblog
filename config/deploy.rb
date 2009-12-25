@@ -25,6 +25,6 @@ namespace :deploy do
   
   task :after_update_code do
     run "cp #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-    run "cp #{shared_path}/config/initializers/load_config.rb #{release_path}/config/initializers/load_config.rb"
+    run "cp #{shared_path}/config/config.yml #{release_path}/config/config.yml"
   end
 end

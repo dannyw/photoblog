@@ -1,2 +1,2 @@
 config/database.yml
-config/initializers/load_config.rb
+config/config.yml
