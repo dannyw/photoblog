@@ -16,8 +16,14 @@ DONE - <break> after photo in RSS feed
 DONE - fix caption html output
 DONE - fix background gradient not showing up in Firefox
 
-***** LATER *****
-- pretty URL
-- page caching
+***** DEC 26, 2009 *****
+DONE - page caching
+- resize photos
 - archive view
+
+***** LATER *****
 - about view
+- cross-post to Tumblr
+- auto-pull from Flickr based on machine tag
+- pretty URL
+- future posting

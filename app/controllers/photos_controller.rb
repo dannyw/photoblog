@@ -1,6 +1,9 @@
 class PhotosController < ApplicationController
   before_filter :authenticate, :except => [:index, :show]
   
+  caches_page :index, :show
+  cache_sweeper :photo_sweeper, :only => [:update, :create, :destroy]
+  
   # GET /photos
   # GET /photos.xml
   def index

@@ -63,9 +63,6 @@ img.photo {
   -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.2);
   -moz-box-shadow: 0 1px 10px rgba(0,0,0,.1);
   box-shadow: 0 1px 10px rgba(0,0,0,.1);  
-  -webkit-transform: rotate(-.3deg);
-  -moz-transform: rotate(-.3deg);
-  transform: rotate(-.3deg);
 }
 
 .words {
