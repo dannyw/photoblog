@@ -26,5 +26,8 @@ namespace :deploy do
   task :after_update_code do
     run "cp #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "cp #{shared_path}/config/config.yml #{release_path}/config/config.yml"
+
+    # link cached directory to the shared dir
+    run "ln -s #{shared_path}/web_files/photos #{release_path}/public/photos"
   end
 end

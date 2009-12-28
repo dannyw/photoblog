@@ -14,6 +14,8 @@ class PhotosController < ApplicationController
     @latest_photo = @photos.first
     @previous_photo = @photos[1]
 
+    @page_title = @photo.pub_date.to_formatted_s(:month_day_year) 
+
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @photos }
@@ -29,6 +31,8 @@ class PhotosController < ApplicationController
     #TODO these could be totally optimized instead of doing additional SQL calls
     @previous_photo = @photo.prev
     @next_photo = @photo.next
+    
+    @page_title = @photo.pub_date.to_formatted_s(:month_day_year) 
 
     respond_to do |format|
       format.html # show.html.erb
@@ -59,7 +63,7 @@ class PhotosController < ApplicationController
 
     respond_to do |format|
       if @photo.save
-        flash[:notice] = 'Photo was successfully created.'
+        # flash[:notice] = 'Photo was successfully created.'
         format.html { redirect_to(@photo) }
         format.xml  { render :xml => @photo, :status => :created, :location => @photo }
       else
@@ -76,7 +80,7 @@ class PhotosController < ApplicationController
 
     respond_to do |format|
       if @photo.update_attributes(params[:photo])
-        flash[:notice] = 'Photo was successfully updated.'
+        # flash[:notice] = 'Photo was successfully updated.'
         format.html { redirect_to(@photo) }
         format.xml  { head :ok }
       else

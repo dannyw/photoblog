@@ -18,12 +18,18 @@ DONE - fix background gradient not showing up in Firefox
 
 ***** DEC 26, 2009 *****
 DONE - page caching
-- resize photos
-- archive view
+
+***** DEC 27, 2009 *****
+DONE - remove flash message for /updates
+DONE - modify deploy.rb to make /public shared (manually created #{shared_path}/web_files/photos)
+
+
 
 ***** LATER *****
-- about view
 - cross-post to Tumblr
 - auto-pull from Flickr based on machine tag
+- resize photos
+- archive view
 - pretty URL
 - future posting
+- about view
