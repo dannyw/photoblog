@@ -196,3 +196,8 @@ a:active {
 #site-title {
   
 }
+
+blockquote {
+  font-size:13px;
+  line-height:22px;
+}
