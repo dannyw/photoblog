@@ -14,7 +14,7 @@ class PhotosController < ApplicationController
     @latest_photo = @photos.first
     @previous_photo = @photos[1]
 
-    @page_title = @photo.pub_date.to_formatted_s(:month_day_year) 
+    @page_title = @latest_photo.pub_date.to_formatted_s(:month_day_year) 
 
     respond_to do |format|
       format.html # index.html.erb
