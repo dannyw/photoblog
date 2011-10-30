@@ -6,8 +6,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
 
-  @page_title = "n/a"  
-  
+  @page_title = "n/a"
+
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 end

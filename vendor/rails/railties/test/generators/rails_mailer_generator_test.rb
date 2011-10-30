@@ -17,11 +17,11 @@ class RailsMailerGeneratorTest < GeneratorTestCase
           ],
           body.split("\n").map{|line| line.sub(' '*4, '') }
       end
-      
+
       assert_no_match /(self.default_url_options =|default_url_options\[.*\] =)/, model,
         'individual mailer models should not set default_url_options because the options are shared by all mailers'
     end
-    
+
     assert_generated_views_for :notifier, 'reset_password.erb'
     assert_generated_unit_test_for :notifier, 'ActionMailer::TestCase'
     assert_generated_file "test/fixtures/notifier/reset_password"

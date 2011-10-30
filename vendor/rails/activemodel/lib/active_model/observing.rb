@@ -8,15 +8,15 @@ module ActiveModel
       def observers
         @observers ||= []
       end
-      
+
       def observers=(*values)
         @observers = values.flatten
       end
-      
+
       def instantiate_observers
         observers.each { |o| instantiate_observer(o) }
       end
-    
+
     protected
       def instantiate_observer(observer)
         # string/symbol
@@ -28,7 +28,7 @@ module ActiveModel
           raise ArgumentError, "#{observer} must be a lowercase, underscored class name (or an instance of the class itself) responding to the instance method. Example: Person.observers = :big_brother # calls BigBrother.instance"
         end
       end
-      
+
       # Notify observers when the observed class is subclassed.
       def inherited(subclass)
         super
@@ -36,7 +36,7 @@ module ActiveModel
         notify_observers :observed_class_inherited, subclass
       end
     end
-    
+
     def self.included(receiver)
       receiver.extend Observable, ClassMethods
     end
@@ -55,7 +55,7 @@ module ActiveModel
       end
 
       def observed_class_name
-        @observed_class_name ||= 
+        @observed_class_name ||=
           if guessed_name = name.scan(/(.*)Observer/)[0]
             @observed_class_name = guessed_name[0]
           end

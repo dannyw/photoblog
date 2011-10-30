@@ -9,7 +9,7 @@ class FooObserver < ActiveModel::Observer
   class << self
     public :new
   end
-  
+
   attr_accessor :stub
 
   def on_spec(record)
@@ -28,12 +28,12 @@ class ObservingTest < ActiveModel::TestCase
   test "initializes model with no cached observers" do
     assert ObservedModel.observers.empty?, "Not empty: #{ObservedModel.observers.inspect}"
   end
-  
+
   test "stores cached observers in an array" do
     ObservedModel.observers << :foo
     assert ObservedModel.observers.include?(:foo), ":foo not in #{ObservedModel.observers.inspect}"
   end
-  
+
   test "flattens array of assigned cached observers" do
     ObservedModel.observers = [[:foo], :bar]
     assert ObservedModel.observers.include?(:foo), ":foo not in #{ObservedModel.observers.inspect}"
@@ -57,14 +57,14 @@ class ObservingTest < ActiveModel::TestCase
     ObservedModel::Observer.expects(:instance)
     ObservedModel.instantiate_observers
   end
-  
+
   test "passes observers to subclasses" do
     FooObserver.instance
     bar = Class.new(Foo)
     assert_equal Foo.count_observers, bar.count_observers
   end
 end
-  
+
 class ObserverTest < ActiveModel::TestCase
   def setup
     ObservedModel.observers = :foo_observer
@@ -80,7 +80,7 @@ class ObserverTest < ActiveModel::TestCase
     assert  instance.send(:observed_classes).include?(Foo), "Foo not in #{instance.send(:observed_classes).inspect}"
     assert !instance.send(:observed_classes).include?(ObservedModel), "ObservedModel in #{instance.send(:observed_classes).inspect}"
   end
-  
+
   test "tracks explicit observed model class" do
     old_instance = FooObserver.new
     assert !old_instance.send(:observed_classes).include?(ObservedModel), "ObservedModel in #{old_instance.send(:observed_classes).inspect}"
@@ -88,7 +88,7 @@ class ObserverTest < ActiveModel::TestCase
     instance = FooObserver.new
     assert instance.send(:observed_classes).include?(ObservedModel), "ObservedModel not in #{instance.send(:observed_classes).inspect}"
   end
-  
+
   test "tracks explicit observed model as string" do
     old_instance = FooObserver.new
     assert !old_instance.send(:observed_classes).include?(ObservedModel), "ObservedModel in #{old_instance.send(:observed_classes).inspect}"
@@ -96,7 +96,7 @@ class ObserverTest < ActiveModel::TestCase
     instance = FooObserver.new
     assert instance.send(:observed_classes).include?(ObservedModel), "ObservedModel not in #{instance.send(:observed_classes).inspect}"
   end
-  
+
   test "tracks explicit observed model as symbol" do
     old_instance = FooObserver.new
     assert !old_instance.send(:observed_classes).include?(ObservedModel), "ObservedModel in #{old_instance.send(:observed_classes).inspect}"
@@ -104,7 +104,7 @@ class ObserverTest < ActiveModel::TestCase
     instance = FooObserver.new
     assert instance.send(:observed_classes).include?(ObservedModel), "ObservedModel not in #{instance.send(:observed_classes).inspect}"
   end
-  
+
   test "calls existing observer event" do
     foo = Foo.new
     FooObserver.instance.stub = stub
@@ -112,7 +112,7 @@ class ObserverTest < ActiveModel::TestCase
     Foo.send(:changed)
     Foo.send(:notify_observers, :on_spec, foo)
   end
-  
+
   test "skips nonexistent observer event" do
     foo = Foo.new
     Foo.send(:changed)

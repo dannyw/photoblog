@@ -4,11 +4,11 @@ DONE - main index controller should only pull in date range from today, and by p
 DONE - previous/next logic
   - test for next previous and next photos
   - if previous and next are enabled, cache the page
-  
+
 DONE - click through of photo to go to Flickr
 
 DONE - add username/login controls
-DONE - deploy into dreamhost!  
+DONE - deploy into dreamhost!
 
 ***** DEC 25, 2009 *****
 DONE - resize to 900px wide photo

@@ -51,11 +51,11 @@ class PluginTest < Test::Unit::TestCase
     assert_nothing_raised do
       plugin_for(@valid_plugin_path).load_paths
     end
-  
+
     assert_raise(LoadError) do
       plugin_for(@empty_plugin_path).load_paths
     end
-  
+
     assert_raise(LoadError) do
       plugin_for('this_is_not_a_plugin_directory').load_paths
     end
@@ -79,32 +79,32 @@ class PluginTest < Test::Unit::TestCase
     # This is an empty path so it raises
     assert_raise(LoadError) do
       plugin = plugin_for(@empty_plugin_path)
-      plugin.stubs(:evaluate_init_rb)      
+      plugin.stubs(:evaluate_init_rb)
       plugin.send(:load, @initializer)
     end
-  
+
     assert_raise(LoadError) do
       plugin = plugin_for('this_is_not_a_plugin_directory')
       plugin.stubs(:evaluate_init_rb)
       plugin.send(:load, @initializer)
     end
   end
-  
+
   def test_should_raise_a_load_error_when_trying_to_access_load_paths_of_an_invalid_plugin
     # This path is fine so nothing is raised
     assert_nothing_raised do
       plugin_for(@valid_plugin_path).load_paths
     end
-  
+
     # This is an empty path so it raises
     assert_raise(LoadError) do
       plugin_for(@empty_plugin_path).load_paths
     end
-  
+
     assert_raise(LoadError) do
       plugin_for('this_is_not_a_plugin_directory').load_paths
     end
-  end    
+  end
 
   def test_loading_a_plugin_gives_the_init_file_access_to_all_it_needs
     failure_tip = "Perhaps someone has written another test that loads this same plugin and therefore makes the StubbyMixin constant defined already."
@@ -117,14 +117,14 @@ class PluginTest < Test::Unit::TestCase
     end
     assert defined?(StubbyMixin)
   end
-  
+
   def test_should_sort_naturally_by_name
     a = plugin_for("path/a")
     b = plugin_for("path/b")
     z = plugin_for("path/z")
     assert_equal [a, b, z], [b, z, a].sort
   end
-  
+
   def test_should_only_be_loaded_once
     plugin = plugin_for(@valid_plugin_path)
     assert !plugin.loaded?
@@ -135,17 +135,17 @@ class PluginTest < Test::Unit::TestCase
     end
     assert plugin.loaded?
   end
-  
+
   def test_should_make_about_yml_available_as_about_method_on_plugin
     plugin = plugin_for(@valid_plugin_path)
     assert_equal "Plugin Author", plugin.about['author']
     assert_equal "1.0.0", plugin.about['version']
   end
-  
+
   def test_should_return_empty_hash_for_about_if_about_yml_is_missing
     assert_equal({}, plugin_for(about_yml_plugin_path('plugin_without_about_yaml')).about)
   end
-  
+
   def test_should_return_empty_hash_for_about_if_about_yml_is_malformed
     assert_equal({}, plugin_for(about_yml_plugin_path('bad_about_yml')).about)
   end

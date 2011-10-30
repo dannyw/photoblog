@@ -33,7 +33,7 @@ class ClassTest < Test::Unit::TestCase
     Class.remove_class(Y::Z::C)
     assert_raise(NameError) { Y::Z::C.is_a?(Class) }
   end
-  
+
   def test_retrieving_subclasses
     @parent   = eval("class D; end; D")
     @sub      = eval("class E < D; end; E")

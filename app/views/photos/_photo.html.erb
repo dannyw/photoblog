@@ -1,15 +1,15 @@
-<h1><%=h photo.title %> &middot; <%=h photo.pub_date.to_formatted_s(:month_day_year) %> </h1> 
-<div class="photo-container"> 
+<h1><%=h photo.title %> &middot; <%=h photo.pub_date.to_formatted_s(:month_day_year) %> </h1>
+<div class="photo-container">
   <img src="<%=h photo.img_url %>" class="photo"/>
-</div> 
-<div class="words"> 
+</div>
+<div class="words">
   <p>
     <%= photo.caption %>
-  </p> 
+  </p>
   <p>
     <a href="<%= photo.flickr_url %>">View on Flickr</a>
   </p>
-</div> 
+</div>
 
 <div class="meta">
   <p>

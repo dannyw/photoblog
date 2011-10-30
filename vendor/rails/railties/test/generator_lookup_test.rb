@@ -18,7 +18,7 @@ class GeneratorLookupTest < Test::Unit::TestCase
     assert Rails::Generator::Base.lookup('a_generator')
     assert Rails::Generator::Base.lookup('stubby_generator')
   end
-  
+
   def test_should_create_generator_source_for_each_directory_in_plugin_paths
     sources = Rails::Generator::Base.sources
     @fixture_dirs.each do |gen_dir|
@@ -26,7 +26,7 @@ class GeneratorLookupTest < Test::Unit::TestCase
       assert sources.any? {|source| source.label == expected_label }
     end
   end
-  
+
   def test_should_preserve_order_in_usage_message
     msg = Rails::Generator::Scripts::Base.new.send(:usage_message)
     positions = @fixture_dirs.map do |gen_dir|

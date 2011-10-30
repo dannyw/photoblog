@@ -91,7 +91,7 @@ module ActiveModel
       errors.clear
 
       run_callbacks(:validate)
-      
+
       if responds_to?(:validate)
         ActiveSupport::Deprecations.warn "Base#validate has been deprecated, please use Base.validate :method instead"
         validate

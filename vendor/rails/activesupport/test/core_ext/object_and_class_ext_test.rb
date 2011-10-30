@@ -76,15 +76,15 @@ class ClassExtTest < Test::Unit::TestCase
   ensure
     Nested.const_set :ClassL, old_class unless defined?(Nested::ClassL)
   end
-  
+
   def test_subclasses_of_should_not_trigger_const_missing
     const_missing = false
     Nested.on_const_missing { const_missing = true }
-    
+
     subclasses = Object.subclasses_of ClassK
     assert !const_missing
     assert_equal [ Nested::ClassL ], subclasses
-    
+
     removed = Nested.class_eval { remove_const :ClassL }  # keep it in memory
     subclasses = Object.subclasses_of ClassK
     assert !const_missing
@@ -92,7 +92,7 @@ class ClassExtTest < Test::Unit::TestCase
   ensure
     Nested.const_set :ClassL, removed unless defined?(Nested::ClassL)
   end
-  
+
   def test_subclasses_of_with_multiple_roots
     classes = Object.subclasses_of(ClassI, ClassK)
     assert_equal %w(ClassJ Nested::ClassL), classes.collect(&:to_s).sort
@@ -258,7 +258,7 @@ class ObjectTryTest < Test::Unit::TestCase
     assert !@string.respond_to?(method)
     assert_raise(NoMethodError) { @string.try(method) }
   end
-  
+
   def test_valid_method
     assert_equal 5, @string.try(:size)
   end

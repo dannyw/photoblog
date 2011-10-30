@@ -1,20 +1,20 @@
 class PhotosController < ApplicationController
   before_filter :authenticate, :except => [:index, :show]
-  
+
   caches_page :index, :show
   cache_sweeper :photo_sweeper, :only => [:update, :create, :destroy]
-  
+
   # GET /photos
   # GET /photos.xml
   def index
-    
+
     # TODO: sort by published photos, only
     @photos = Photo.find(:all, :order => "pub_date DESC", :conditions => "pub_date <= NOW()", :limit => 15)
-    
+
     @latest_photo = @photos.first
     @previous_photo = @photos[1]
 
-    @page_title = @latest_photo.pub_date.to_formatted_s(:month_day_year) 
+    @page_title = @latest_photo.pub_date.to_formatted_s(:month_day_year)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -31,8 +31,8 @@ class PhotosController < ApplicationController
     #TODO these could be totally optimized instead of doing additional SQL calls
     @previous_photo = @photo.prev
     @next_photo = @photo.next
-    
-    @page_title = @photo.pub_date.to_formatted_s(:month_day_year) 
+
+    @page_title = @photo.pub_date.to_formatted_s(:month_day_year)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -101,9 +101,9 @@ class PhotosController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
+
   private
-  
+
   def authenticate
     authenticate_or_request_with_http_basic do |name, password|
       name == APP_CONFIG[:username] && password == APP_CONFIG[:password]

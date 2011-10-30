@@ -2,12 +2,12 @@ Active Model
 ==============
 
 Totally experimental library that aims to extract common model mixins from
-ActiveRecord for use in ActiveResource (and other similar libraries).  
+ActiveRecord for use in ActiveResource (and other similar libraries).
 This is in a very rough state (no autotest or spec rake tasks set up yet),
-so please excuse the mess.  
+so please excuse the mess.
 
 Here's what I plan to extract:
-  * ActiveModel::Observing 
+  * ActiveModel::Observing
   * ActiveModel::Callbacks
   * ActiveModel::Validations
 
