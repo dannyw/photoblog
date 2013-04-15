@@ -14,7 +14,7 @@ class PluginLocatorTest < Test::Unit::TestCase
     plugin_consumer.expects(:consume).with(:a)
     plugin_consumer.expects(:consume).with(:b)
     plugin_consumer.expects(:consume).with(:c)
-  
+
     locator.each do |plugin|
       plugin_consumer.consume(plugin)
     end
@@ -34,11 +34,11 @@ class PluginFileSystemLocatorTest < Test::Unit::TestCase
   end
 
   def test_should_return_rails_plugin_instances_when_calling_create_plugin_with_a_valid_plugin_directory
-    assert_kind_of Rails::Plugin, @locator.send(:create_plugin, @valid_plugin_path)  
+    assert_kind_of Rails::Plugin, @locator.send(:create_plugin, @valid_plugin_path)
   end
 
   def test_should_return_nil_when_calling_create_plugin_with_an_invalid_plugin_directory
-    assert_nil @locator.send(:create_plugin, @empty_plugin_path)  
+    assert_nil @locator.send(:create_plugin, @empty_plugin_path)
   end
 
   def test_should_return_all_plugins_found_under_the_set_plugin_paths
@@ -48,7 +48,7 @@ class PluginFileSystemLocatorTest < Test::Unit::TestCase
   def test_should_find_plugins_only_under_the_plugin_paths_set_in_configuration
     @configuration.plugin_paths = [File.join(plugin_fixture_root_path, "default")]
     assert_equal ["acts_as_chunky_bacon", "gemlike", "plugin_with_no_lib_dir", "stubby"].sort, @locator.plugins.map(&:name).sort
-  
+
     @configuration.plugin_paths = [File.join(plugin_fixture_root_path, "alternate")]
     assert_equal ["a"], @locator.plugins.map(&:name)
   end

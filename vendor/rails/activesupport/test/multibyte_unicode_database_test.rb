@@ -12,7 +12,7 @@ class MultibyteUnicodeDatabaseTest < Test::Unit::TestCase
       @ucd.send(attribute)
     end
   end
-  
+
   def test_load
     @ucd.load
     ActiveSupport::Multibyte::UnicodeDatabase::ATTRIBUTES.each do |attribute|

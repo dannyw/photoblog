@@ -1,12 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" > 
-<head> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" >
+<head>
   <title>Plasticity &middot; <%= @page_title %></title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <%= stylesheet_link_tag 'scaffold' %>
   <link href="/stylesheets/photoblog.css" media="screen" rel="stylesheet" type="text/css" />
-  <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/plasticity" title="Plasticity - Some Photos by Danny Wen" />   
-  
+  <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/plasticity" title="Plasticity - Some Photos by Danny Wen" />
+
   <script type="text/javascript">
 
     var _gaq = _gaq || [];
@@ -20,15 +20,15 @@
     })();
 
   </script>
-</head> 
- 
-<body>  
-  
+</head>
+
+<body>
+
   <div id="top-bar">
     <div id="top-bar-content">
       <div id="site-title">
         <a href="/"><em>Plasticity</em></a>
-      </div>      
+      </div>
       <!-- div id="top-nav">
         <a href="">About</a>
         <a href="">Archive</a>
@@ -37,17 +37,17 @@
   </div>
 
   <p style="color: green"><%= flash[:notice] %></p>
-  
-  <div id="container" style="width: 910px;border:0px solid #c00;"> 
-    
-    
-    <%= yield %>  
-    
-  
-    <div id="footer"> 
+
+  <div id="container" style="width: 910px;border:0px solid #c00;">
+
+
+    <%= yield %>
+
+
+    <div id="footer">
     	&copy; 2009 <a href="http://www.dannywen.com">Danny Wen</a>
-    </div> 
-  
-  </div> 
-</body> 
+    </div>
+
+  </div>
+</body>
 </html>

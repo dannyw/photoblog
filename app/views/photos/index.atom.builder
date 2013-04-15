@@ -1,7 +1,7 @@
 atom_feed do |feed|
   feed.title("Plasticity Photos")
   feed.updated(@photos.first.created_at)
-  
+
   @photos.each do |photo|
     feed.entry(photo) do |entry|
       entry.title(photo.title)

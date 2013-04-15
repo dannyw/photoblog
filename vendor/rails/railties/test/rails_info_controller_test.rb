@@ -11,10 +11,10 @@ class Rails::InfoController < ActionController::Base
   class << self
     cattr_accessor :local_request
   end
-  
+
   # Re-raise errors caught by the controller.
   def rescue_action(e) raise e end;
-  
+
 protected
   def local_request?
     self.class.local_request
@@ -40,7 +40,7 @@ class Rails::InfoControllerTest < ActionController::TestCase
     assert_tag :tag => 'table'
     assert_response :success
   end
-  
+
   def test_rails_info_properties_error_rendered_for_non_local_request
     Rails::InfoController.local_request = false
     ActionController::Base.consider_all_requests_local = false

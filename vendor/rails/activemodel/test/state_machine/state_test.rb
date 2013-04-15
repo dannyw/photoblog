@@ -29,7 +29,7 @@ class StateTest < ActiveModel::TestCase
   test 'sets the display_name from options' do
     assert_equal "A State", new_state(:display => "A State").display_name
   end
-  
+
   test 'sets the options and expose them as options' do
     @options.delete(:machine)
     assert_equal @options, new_state.options
@@ -66,7 +66,7 @@ class StateTest < ActiveModel::TestCase
 
     record = stub
     record.expects(:foobar)
-  
+
     state.call_action(:entering, record)
   end
 end

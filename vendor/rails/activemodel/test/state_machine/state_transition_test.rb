@@ -55,30 +55,30 @@ class StateTransitionGuardCheckTest < ActiveModel::TestCase
   test 'should call the method on the object if guard is a symbol' do
     opts = {:from => 'foo', :to => 'bar', :guard => :test_guard}
     st = ActiveModel::StateMachine::StateTransition.new(opts)
-  
+
     obj = stub
     obj.expects(:test_guard)
-    
+
     st.perform(obj)
   end
-  
+
   test 'should call the method on the object if guard is a string' do
     opts = {:from => 'foo', :to => 'bar', :guard => 'test_guard'}
     st = ActiveModel::StateMachine::StateTransition.new(opts)
-  
+
     obj = stub
     obj.expects(:test_guard)
-    
+
     st.perform(obj)
   end
-  
+
   test 'should call the proc passing the object if the guard is a proc' do
     opts = {:from => 'foo', :to => 'bar', :guard => Proc.new {|o| o.test_guard}}
     st = ActiveModel::StateMachine::StateTransition.new(opts)
-  
+
     obj = stub
     obj.expects(:test_guard)
-  
+
     st.perform(obj)
   end
 end

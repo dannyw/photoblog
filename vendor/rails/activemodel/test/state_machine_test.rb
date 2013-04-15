@@ -6,7 +6,7 @@ class StateMachineSubject
   state_machine do
     state :open,   :exit => :exit
     state :closed, :enter => :enter
-    
+
     event :close, :success => :success_callback do
       transitions :to => :closed, :from => [:open]
     end
@@ -28,10 +28,10 @@ class StateMachineSubject
   def always_false
     false
   end
- 
+
   def success_callback
   end
- 
+
   def enter
   end
   def exit
@@ -71,46 +71,46 @@ class StateMachineInstanceLevelTest < ActiveModel::TestCase
   def setup
     @foo = StateMachineSubject.new
   end
- 
+
   test 'defines an accessor for the current state' do
     assert @foo.respond_to?(:current_state)
   end
- 
+
   test 'defines a state querying instance method on including class' do
     assert @foo.respond_to?(:open?)
   end
- 
+
   test 'defines an event! instance method' do
     assert @foo.respond_to?(:close!)
   end
- 
+
   test 'defines an event instance method' do
     assert @foo.respond_to?(:close)
   end
 end
- 
+
 class StateMachineInitialStatesTest < ActiveModel::TestCase
   def setup
     @foo = StateMachineSubject.new
   end
- 
+
   test 'sets the initial state' do
     assert_equal :open, @foo.current_state
   end
- 
+
   test '#open? should be initially true' do
     assert @foo.open?
   end
-  
+
   test '#closed? should be initially false' do
     assert !@foo.closed?
   end
- 
+
   test 'uses the first state defined if no initial state is given' do
     assert_equal :read, @foo.current_state(:bar)
   end
 end
- 
+
 class StateMachineEventFiringWithPersistenceTest < ActiveModel::TestCase
   def setup
     @subj = StateMachineSubject.new
@@ -240,7 +240,7 @@ class StateMachineInheritanceTest < ActiveModel::TestCase
   test "has the same states as its parent" do
     assert_equal StateMachineSubject.state_machine.states, StateMachineSubjectSubclass.state_machine.states
   end
- 
+
   test "has the same events as its parent" do
     assert_equal StateMachineSubject.state_machine.events, StateMachineSubjectSubclass.state_machine.events
   end
@@ -252,17 +252,17 @@ class StateMachineSubject
     state :showering
     state :working
     state :dating
- 
+
     event :wakeup do
       transitions :from => :sleeping, :to => [:showering, :working]
     end
- 
+
     event :dress do
       transitions :from => :sleeping, :to => :working, :on_transition => :wear_clothes
       transitions :from => :showering, :to => [:working, :dating], :on_transition => Proc.new { |obj, *args| obj.wear_clothes(*args) }
     end
   end
- 
+
   def wear_clothes(shirt_color, trouser_type)
   end
 end
@@ -274,25 +274,25 @@ class StateMachineWithComplexTransitionsTest < ActiveModel::TestCase
 
   test 'transitions to specified next state (sleeping to showering)' do
     @subj.wakeup! :showering
-    
+
     assert_equal :showering, @subj.current_state(:chetan_patil)
   end
- 
+
   test 'transitions to specified next state (sleeping to working)' do
     @subj.wakeup! :working
- 
+
     assert_equal :working, @subj.current_state(:chetan_patil)
   end
- 
+
   test 'transitions to default (first or showering) state' do
     @subj.wakeup!
- 
+
     assert_equal :showering, @subj.current_state(:chetan_patil)
   end
- 
+
   test 'transitions to default state when on_transition invoked' do
     @subj.dress!(nil, 'purple', 'dressy')
- 
+
     assert_equal :working, @subj.current_state(:chetan_patil)
   end
 

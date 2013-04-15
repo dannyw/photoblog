@@ -13,10 +13,10 @@ class ArrayExtAccessTests < Test::Unit::TestCase
     assert_equal %w( a b c ), %w( a b c d ).to(2)
     assert_equal %w( a b c d ), %w( a b c d ).to(10)
   end
-  
+
   def test_second_through_tenth
     array = (1..42).to_a
-    
+
     assert_equal array[1], array.second
     assert_equal array[2], array.third
     assert_equal array[3], array.fourth
@@ -49,7 +49,7 @@ end
 
 class ArrayExtToSentenceTests < Test::Unit::TestCase
   include ActiveSupport::Testing::Deprecation
-  
+
   def test_plain_array_to_sentence
     assert_equal "", [].to_sentence
     assert_equal "one", ['one'].to_sentence
@@ -61,11 +61,11 @@ class ArrayExtToSentenceTests < Test::Unit::TestCase
     assert_deprecated(":connector has been deprecated. Use :words_connector instead") do
       assert_equal "one, two, three", ['one', 'two', 'three'].to_sentence(:connector => '')
     end
-    
+
     assert_deprecated(":connector has been deprecated. Use :words_connector instead") do
       assert_equal "one, two, and three", ['one', 'two', 'three'].to_sentence(:connector => 'and ')
     end
-    
+
     assert_equal "one two, and three", ['one', 'two', 'three'].to_sentence(:words_connector => ' ')
     assert_equal "one & two, and three", ['one', 'two', 'three'].to_sentence(:words_connector => ' & ')
     assert_equal "onetwo, and three", ['one', 'two', 'three'].to_sentence(:words_connector => nil)
@@ -75,11 +75,11 @@ class ArrayExtToSentenceTests < Test::Unit::TestCase
     assert_deprecated(":skip_last_comma has been deprecated. Use :last_word_connector instead") do
       assert_equal "one, two and three", ['one', 'two', 'three'].to_sentence(:skip_last_comma => true)
     end
-    
+
     assert_deprecated(":skip_last_comma has been deprecated. Use :last_word_connector instead") do
       assert_equal "one, two, and three", ['one', 'two', 'three'].to_sentence(:skip_last_comma => false)
     end
-    
+
     assert_equal "one, two, and also three", ['one', 'two', 'three'].to_sentence(:last_word_connector => ', and also ')
     assert_equal "one, twothree", ['one', 'two', 'three'].to_sentence(:last_word_connector => nil)
     assert_equal "one, two three", ['one', 'two', 'three'].to_sentence(:last_word_connector => ' ')

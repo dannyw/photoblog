@@ -152,7 +152,7 @@ class OrderedHashTest < Test::Unit::TestCase
     assert_equal [@keys.first, @values.first], pair
     assert !@ordered_hash.keys.include?(pair.first)
   end
-  
+
   def test_keys
     original = @ordered_hash.keys.dup
     @ordered_hash.keys.pop

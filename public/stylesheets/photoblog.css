@@ -9,7 +9,7 @@
 
 html {
   margin: 0;
-  padding: 0; 
+  padding: 0;
   background: #232323 url('/images/grey-gradient.png') repeat-x;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #454545), color-stop(1.0, #232323)) #232323 no-repeat;
   background: -moz-linear-gradient(left top, left bottom, #454545, #232323);
@@ -34,7 +34,7 @@ a {
 p {
   margin: 20px 0;
   padding: 0;
-  
+
   font-size: 13px;
   line-height: 22px;
 }
@@ -62,7 +62,7 @@ img.photo {
   width:900px;
   -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.2);
   -moz-box-shadow: 0 1px 10px rgba(0,0,0,.1);
-  box-shadow: 0 1px 10px rgba(0,0,0,.1);  
+  box-shadow: 0 1px 10px rgba(0,0,0,.1);
 }
 
 .words {
@@ -91,7 +91,7 @@ img.photo {
   padding: .9em;
   margin-left:.5em;
   -webkit-transition-duration: 0.33s;
-  -webkit-transition-property: color, background;  
+  -webkit-transition-property: color, background;
 }
 
 .meta a.disabled {
@@ -162,10 +162,10 @@ img.photo {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   -webkit-transition-duration: 0.33s;
-  -webkit-transition-property: color, background;  
+  -webkit-transition-property: color, background;
   padding-top: 30px;
   font-size: 12px;
-  padding: 30px 1.2em .7em 1.2em; 
+  padding: 30px 1.2em .7em 1.2em;
   margin-left:.5em;
   font-family: Georgia;
   font-style: italic;
@@ -194,7 +194,7 @@ a:active {
 }
 
 #site-title {
-  
+
 }
 
 blockquote {

@@ -396,7 +396,7 @@ class InitializerViewPathsTest  < Test::Unit::TestCase
     ActionMailer::Base.view_paths.expects(:load!).never
     Rails::Initializer.run(:load_view_paths, @config)
   end
-  
+
   def test_load_view_paths_loads_view_paths
     ActionController::Base.view_paths.expects(:load!)
     ActionMailer::Base.view_paths.expects(:load!)

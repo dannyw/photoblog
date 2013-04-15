@@ -74,7 +74,7 @@ class RailsModelGeneratorTest < GeneratorTestCase
   ensure
     ActiveRecord::Base.pluralize_table_names = true
   end
-  
+
   def test_migration_with_namespaces_in_model_name_without_plurization
     ActiveRecord::Base.pluralize_table_names = false
     run_generator('model', %w(Gallery::Image))

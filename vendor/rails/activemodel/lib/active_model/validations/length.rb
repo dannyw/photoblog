@@ -2,7 +2,7 @@ module ActiveModel
   module Validations
     module ClassMethods
       ALL_RANGE_OPTIONS = [ :is, :within, :in, :minimum, :maximum ].freeze
-    
+
       # Validates that the specified attribute matches the length restrictions supplied. Only one option can be used at a time:
       #
       #   class Person < ActiveRecord::Base
